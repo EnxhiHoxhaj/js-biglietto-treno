@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*DEBUG*/
+
+.container {
+    width: 70%;
+    min-height: 400px;
+    background-color: blue;
+    margin: auto;
+    padding: 20px 0;
+}
+
+div {
+    width: 80%;
+    min-height: 100px;
+    margin: 20px auto;
+    background-color: lightskyblue;
+}
