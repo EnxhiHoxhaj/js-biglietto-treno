@@ -5,6 +5,10 @@ let anniUser = parseInt(prompt("How old are you?"));
 
 console.log("How old are you?: I am " + anniUser + " years old" );
 
+let years = "How old are you?: I am " + anniUser + " years old"
+
+document.getElementById("years").innerHTML = years;
+
 //chiedere la distanza da percorrere con il treno
 
 //calcolare il prezzo del biglietto in base ai km da percorrere
