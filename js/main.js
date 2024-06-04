@@ -41,11 +41,11 @@ console.log( "You have a 40% discount, so the cost of your ticket is: " + sale40
 //prezzo finale del biglietto
 
 if (anniUser <= 17) {
-    finale = sale20;
+    finale = "You have a 20% discount, so the cost of your ticket is: " + sale20 + "€";
 } else if(anniUser >= 65) {
-    finale = sale40;
+    finale = "You have a 40% discount, so the cost of your ticket is: " + sale40 + "€";
 } else {
-    finale = price;
+    finale = "The cost of your ticket is " + price + "€";
 }
 
 document.getElementById("ticket-cost").innerHTML = finale;
