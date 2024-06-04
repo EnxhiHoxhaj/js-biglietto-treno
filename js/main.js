@@ -22,10 +22,26 @@ document.getElementById("km").innerHTML = journey;
 
 const rate = Number( 0.25 );
 
-let price = parseInt(rate * distance);
+var price = parseInt(rate * distance);
 
 console.log("The cost of your ticket is " + price + "€");
 
+var sale20 = price - ( price * .2)
+
+console.log( "scondo del 20%: " + sale20)
+
+var sale40 = price - ( price * .4)
+
+console.log( "scondo del 40%: " + sale40)
+
+
+
 //applicare lo sconto in base alla fascia d'età
+ 
+/*if (anniUser < 18) {
+    price = price * 0.2;
+} if (anniUser > 65) {
+    price = price * 0.8;
+}*/
 
 //prezzo finale del biglietto
