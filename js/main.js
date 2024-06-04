@@ -1,6 +1,8 @@
 // CALCOLO DEL PREZZO DEL BIGLIETTO DEL TRENO
 //chiedere l'età dell'utente
 
+let finale;
+
 let anniUser = parseInt(prompt("How old are you?"));
 
 console.log("How old are you?: I am " + anniUser + " years old" );
@@ -22,26 +24,28 @@ document.getElementById("km").innerHTML = journey;
 
 const rate = Number( 0.25 );
 
-var price = parseInt(rate * distance);
+let price = parseInt(rate * distance);
 
 console.log("The cost of your ticket is " + price + "€");
 
-var sale20 = price - ( price * .2)
-
-console.log( "scondo del 20%: " + sale20)
-
-var sale40 = price - ( price * .4)
-
-console.log( "scondo del 40%: " + sale40)
-
-
-
 //applicare lo sconto in base alla fascia d'età
- 
-/*if (anniUser < 18) {
-    price = price * 0.2;
-} if (anniUser > 65) {
-    price = price * 0.8;
-}*/
+
+var sale20 = price - ( price * .2);
+
+console.log( "You have a 20% discount, so the cost of your ticket is: " + sale20 + "€");
+
+var sale40 = price - ( price * .4);
+
+console.log( "You have a 40% discount, so the cost of your ticket is: " + sale40 + "€");
 
 //prezzo finale del biglietto
+
+if (anniUser <= 17) {
+    finale = sale20;
+} else if(anniUser >= 65) {
+    finale = sale40;
+} else {
+    finale = price;
+}
+
+document.getElementById("ticket-cost").innerHTML = finale;
